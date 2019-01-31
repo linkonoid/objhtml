@@ -2,7 +2,7 @@
 Library for generating html-elements on native Golang with application of object model. Implemented full generation of all html elements
 
 Usage:
-```
+```go
 import (
 	"github.com/linkonoid/objhtml"
 )
@@ -120,18 +120,18 @@ func main() {
 	)
 	head.AddScript(objhtml.NewScript("js"))
 	head.AddCss(objhtml.NewCss("css"))
-	body.Element.SetAttribute("onload", `runApplication("`+app.Id+`");`)
+	//body.Element.SetAttribute("onload", `runApplication("`+app.Id+`");`)
 	html := objhtml.NewHtml("en", head, body)
 
   //Render html to 
- err := html.Element.Render()
-		if err != nil {
-			println("Error rendering")
-			//return err
-		} else {
-      fmt.Fprintln(objhtml.Output.Bytes()) //Output html page to io.Writer
-      //For non cashing outs: objhtml.Output.Reset()
-		}
+  err := html.Element.Render()
+	if err != nil {
+		println("Error rendering")
+		//return err
+	} else {
+		fmt.Fprintln(objhtml.Output.Bytes()) //Output html page to io.Writer
+      		//For non cashing outs: objhtml.Output.Reset()
+	}
 }
 ```
  
