@@ -130,7 +130,7 @@ func main() {
 		//return err
 	} else {
 		fmt.Fprintln(objhtml.Output.Bytes()) //Output html page to io.Writer
-      		//For non cashing outs: objhtml.Output.Reset()
+      		//For non caching out: objhtml.Output.Reset()
 	}
 }
 ```
