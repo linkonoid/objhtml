@@ -1,5 +1,5 @@
 # objhtml
-Library for generating html-elements on native Golang with application of object model. Implemented full generation of all html elements
+Implemented full generation of all html elements
 
 Usage:
 ```go
