@@ -1,10 +1,3 @@
-//=============================================
-//  Base html elements  //
-//=============================================
-//http://htmlbook.ru/html/input/type
-//https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file
-//https://github.com/PuerkitoBio/goquery
-
 package objhtml
 
 import (
