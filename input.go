@@ -97,49 +97,6 @@ func (cb *CheckBoxInput) Checked() bool {
 	return exists
 }
 
-//=============================================
-//  Radiobuttons checkboxes  //
-//=============================================
-
-//type Radiocheckbox struct {
-//	*Element
-//	group    string
-//	radiobox bool
-//}
-
-////Creates either new radiobox or checkbox.
-////Checkboxes are not affected by the grouping
-//func NewRadioCheckbox(radiobox bool, group string, styles ...Style) *Radiocheckbox {
-//	return &Radiocheckbox{newWidget(styles...), group, radiobox}
-//}
-
-////Get the state of a radiobox/checkbox
-//func (t *Radiocheckbox) Checked() bool {
-//	reply := make(chan string)
-//	evt := Event(`reply = $("#`+t.id+`").prop("checked")`, reply)
-//	events <- evt
-//	if <-reply == "true" {
-//		return true
-//	}
-//	return false
-//}
-
-////Checks the checkbox/radiobox
-//func (t *Radiocheckbox) Check() {
-//	events <- Event(jq(t.id, `prop("checked", "checked")`), nil)
-//}
-
-////Unchecks the checkbox/radiobox
-//func (t *Radiocheckbox) Uncheck() {
-//	events <- Event(jq(t.id, `prop("checked", false)`), nil)
-//}
-
-//func (t *Radiocheckbox) HTML() string {
-//	if t.radiobox {
-//		return fmt.Sprintf(`<input type="radio" id="%s" name="%s" style="%s"/>`, t.id, t.group, t.style.Marshal())
-//	}
-//	return fmt.Sprintf(`<input type="checkbox" id="%s" style="%s"/>`, t.id, t.style.Marshal())
-//}
 
 //=============================================
 //  <input> File Input  //
