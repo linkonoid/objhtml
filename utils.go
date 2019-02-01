@@ -39,10 +39,6 @@ var (
 //=============================================
 //  Practical  //
 //=============================================
-//When you compile a file, be it image, or page or whatever, to a []byte, it can be used with this map.
-//when the page is requested on the server, fx. /img/cat.jpg, it will write the bytes in
-//		hgui.SetResource(map[string][]byte{"/img/cat.jpg", catpicvar})
-//back to the client.
 func SetResource(files map[string][]byte) {
 	resources = files
 }
