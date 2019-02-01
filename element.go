@@ -276,18 +276,6 @@ func (e *Element) Find(id string) *Element {
 	return nil
 }
 
-//OnKeyPressEvent register handler as an OnKeyPressed event.
-//func (e *Element) OnKeyPressEvent(event string, keyCode int, handler EventHandler) {
-//	e.SetAttribute(event, fmt.Sprintf(`callHandlerKey(event,%d,'%s',this);`, keyCode, event))
-//	e.eventHandlers[event] = handler
-//}
-
-//OnEvent register an DOM element event.
-//func (e *Element) OnEvent(event string, handler EventHandler) {
-//	e.SetAttribute(event, fmt.Sprintf(`callHandler('%s',this);`, event))
-//	e.eventHandlers[event] = handler
-//}
-
 //OnEvent register an DOM element event.
 func (e *Element) OnEvent(event string, handler EventHandler, change *Element) {
 	e.SetAttribute("onevent", "")
@@ -299,17 +287,6 @@ func (e *Element) OnEvent(event string, handler EventHandler, change *Element) {
 	}
 	e.eventHandlers[event] = *Handler
 }
-
-////This is set ONLY on the client side, the server does not record this.
-////The use of frame.Flip, removes everything made through this call
-////If used with flip, it should be called afterwards.
-//func (w *widget) SetEvent(event evtType, action func()) {
-//	if action == nil {
-//		return
-//	}
-//	handlers[w.id+"."+string(event)] = action
-//	events <- Event(fmt.Sprintf(`$("#%s").attr("%s", "callHandler('%s.%s')")`, w.id, string(event), w.id, string(event)), nil)
-//}
 
 func (e *Element) toNode() *html.Node {
 	node := &html.Node{Attr: e.Attributes, Data: e.data, Type: e.nodeType}
